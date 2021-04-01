@@ -1,0 +1,1 @@
+devopsdockeruh/simple-web-service:alpine is only 15.7MB, devopsdockeruh/simple-web-service:ubuntu is 83MB
