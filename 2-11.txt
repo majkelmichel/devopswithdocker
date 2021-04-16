@@ -1,0 +1,6 @@
+My project that I have been working on is a discord bot written in Python.
+
+To contenerize it I:
+1. prepared Dockerfile that install Python and all required dependencies of the project
+2. built and published the image to DockerHub
+3. prepared docker-compose.yml file that runs the app as well as defines voluems and env-file name

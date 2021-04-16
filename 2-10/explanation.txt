@@ -1,0 +1,2 @@
+I changed ENV variables declarations in Dockerfiles.
+I also built images with tag 80 (example-backend:80) to differentitate them from older ones.
