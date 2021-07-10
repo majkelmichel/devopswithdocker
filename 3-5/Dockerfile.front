@@ -1,0 +1,18 @@
+FROM node:14-alpine
+
+WORKDIR /usr/src/app
+
+EXPOSE 5000
+
+ENV REACT_APP_BACKEND_URL=http://localhost:8080
+
+RUN adduser --disabled-password appuser && npm install -g serve
+
+COPY . .
+
+RUN npm install && npm run build && \
+    rm -rf src && rm -rf node_modules && rm -rf public
+
+USER appuser
+
+CMD ["serve", "-s", "-l", "5000", "build"]

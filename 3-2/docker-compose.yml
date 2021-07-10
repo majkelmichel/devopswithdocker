@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+    build-service:
+        image: build-container
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - /usr/bin/docker:/usr/bin/docker
+        container_name: build-container
+        env_file: .env
+        command: https://github.com/majkelmichel/spring-example-project # you can change this to a link to any public repository
